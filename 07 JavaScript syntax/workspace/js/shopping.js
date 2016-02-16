@@ -10,10 +10,10 @@ function calculate() {
 	var total;
 
 	// Get references to the form values:
-	var quantity = document.getElementById('quantity').value;
-	var price = document.getElementById('price').value;
-	var tax = document.getElementById('tax').value;
-	var discount = document.getElementById('discount').value;
+	var quantity = parseInt('quantity').value;
+	var price = parseFloat('price').value;
+	var tax = parseFloat('tax').value;
+	var discount = parseFloat('discount').value;
 
 	// Add validation here later!
 
