@@ -47,12 +47,34 @@ ctype html>
 				div.innerHTML = message + count + " times!";
 			};
 		};
+		window.onload = function() {
+			var count = 0;
+			};
+			var button = document.getElementById("-");
+			button.onclick = function(){
+				--count;
+				button.value = count
+			};
+			var button = document.getElementById("+");
+			button.onclick = function(){
+				count++;
+				button.value = 'globalcount'
+			};
+				
+			var button = document.getElementById("0");
+			button.onclick = function(){
+				null;
+			}
 	</script>
 </head>
 
 <body>
 	<button id="clickme">Click me!</button>
 	<div id="message"></div>
+	<div id="playback-speed"></div>
+	<button id="Decrement">-</button>
+	<button id ="Reset">0</button>
+	<button id ="Increment">+</button>
 </body>
 
 </html>
