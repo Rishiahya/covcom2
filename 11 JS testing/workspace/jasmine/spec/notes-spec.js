@@ -28,9 +28,8 @@ describe('notes module', () => {
   it('should ignore notes containing only whitespace', ()=>{
     expect(notes.add('   ')).toBe(false);
     expect(notes.count()).toBe(5);
-    pending();
   });
-  xit('should require a string parameter', ()=>{
+  it('should require a string parameter', ()=>{
     expect(notes.add()).toBe(false);
     expect(notes.count()).toBe(5);
   });

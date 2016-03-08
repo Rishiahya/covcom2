@@ -10,6 +10,7 @@
 		map.onmousemove = showCoords;
 		var mydiv = document.getElementById("mydiv");
 		mydiv.onclick = addtext;
+		addtext();
 	}
 	
 	function showCoords(eventObj) {
@@ -20,14 +21,17 @@
 	}
 
 	function addtext(){
-		if (document.createTextNode){
-			var textToAdd = " Div was clicked! "
-			var newNode = document.createTextNode(textToAdd);
-			document.getElementById("mydiv").appendChild(newNode);
-		} else {
-			alert("Looks like you have an old browser!");
+		var data =['Div was Clicked!'];
+			
+var x = document.createElement("UL");
+for(var i = 0; i< data.length; i++){
+  var y = document.createElement("LI");
+  var newNode = document.createTextNode(data[i]);
+    y.appendChild(newNode);
+    x.appendChild(y);
 		}
-	}
+					document.getElementById("mydiv").appendChild(x);
+		}
   </script>
 </head>
 <body>
